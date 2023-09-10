@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background:rgb(29, 27, 27);
+        }
+        .topbg{
+            height: 140px;
+            font-size: 100px;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bolder;
+            color: rgb(46, 45, 45);
+            background: rgb(29, 27, 27);
+            padding-top: 50PX;
+            padding-bottom: 30PX;
+            /* border: 2px solid black; */
+        }
+        .topbg p{
+            font-size: 50px;
+            margin-top: -100px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            color: #fff;
+        }
+        .topbg p span{
+            color:goldenrod;
+        }
+        .containerblog{
+            display: flex;
+            width: 1300px;
+            height: 900px;
+            /* margin-top: 20PX; */
+            /* border: 2px solid black; */
+        }
+        .blosetting{
+            width: 60px;
+            height: 50px;
+            border: 2px solid black;
+            margin-right: 20px;
+            margin-top: 30PX;
+            align-items: center;
+            background: #fff;
+            font-size: 20px;
+        }
+        .rotate i{
+            animation: rotation 2s infinite linear;
+            margin:15px 10px 10px 20px;
+            color: black;
+            
+            
+
+        }
+        @keyframes rotation{
+            from{ transform: rotate(0deg);
+            }
+            to{transform: rotate(359deg);
+            }
+        }
+        .smallcontainer{
+            width: 1100px;
+            height: 830px;
+            /* border: 2px solid black; */
+            margin-top: 30px;
+        }
+        .menublog{
+            margin-top: -100px; 
+            /* margin-left:0px; */
+            position: fixed;
+            right: 0;
+            padding-right: 30px;
+        }
+        
+        .menublog ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: end;
+            list-style: none;
+            width: 100%;
+            
+        }
+        .menublog p{
+            font-size: 14px;
+        }
+        .menublog ul li{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 50px;
+            height: 50px;
+            margin-top: 12px;
+            
+        }
+        .menublog ul li a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            overflow: hidden;
+            font-size: 15px;
+            background: rgb(46, 45, 45); 
+            border-radius: 50px;
+            padding: 0 25px; 
+            width: 100%;
+            height: 100%;
+            color: #fff; 
+            gap: 16px;
+            justify-content: end;
+            
+        }
+                
+        .menublog ul li a:hover{
+            overflow: visible;
+            width: fit-content;
+            background: goldenrod;
+            /* letter-spacing: 1px; */
+        }
+        .menublog #active{
+            background: goldenrod;
+        }
+        .inner{
+            /* border: 2px solid black; */
+            /* width: 1000px; */
+            height: 395px;
+            margin-left: 20px;
+            display: flex;
+            margin-bottom: 20PX;
+            padding-top: 10px;
+        }
+        .row1{
+            width: 1200px;
+            height: 390px;
+            /* border: 2px solid black;  */
+            background: rgb(46, 45, 45);
+            color: #fff;
+            border-radius: 10PX;
+            font-size: 15.5px;
+            font-family: sans-serif;
+            margin-left: 25PX;
+           
+        }
+        
+        .row1 img{
+             width: 100%;
+             /* max-width: 350px; */
+             height: 200px;
+             object-fit: cover;
+             margin-bottom: 0px;
+            
+        }
+        .row1 hr{
+            height: 5px;
+            border: 2px solid goldenrod;
+            background: goldenrod; 
+            margin-top: 0px;
+        }
+        .row1 p, h3{
+            margin-left: 20px; 
+            margin-right: 10px;
+        }
+        .row1 p{
+            line-height: 1.5em;
+        }
+        .row1 a{
+            text-decoration: none;
+            color: #fff;
+        }
+        
+          .row1:hover a{
+            overflow: visible;
+            width: fit-content;
+           
+            color: goldenrod;
+        }  
+        
+        .smallcontainer .inner .row1:hover{
+            transform: scale(1.03);
+            
+        }
+        .pageslide{
+            display: flex;
+            width: 200px;
+            height: 50px ;
+            margin-left: 600px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+        .pageslide div{
+            width: 40px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 10px;
+            background: rgb(46, 45, 45); 
+            color: #fff;
+            text-align: center;
+            padding-top: 10px;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            
+        }
+        .pageslide #two{
+            background: goldenrod;
+        }
+        .pageslide div:hover{
+            background: goldenrod;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="topbg"><big>POST</big> 
+        <p>MY <span>BLOG</span></div>
+    <div class="containerblog">
+        <div class="blosetting">
+            <div class="rotate">
+                <span><i class="fa-solid fa-gear"></i></span>                                                            
+            </div>
+        </div>
+        <div class="smallcontainer">
+            <div class="inner">
+                <div class="row1">
+                    <a href="">
+                    <img src="./images/blogimg1.JPG" alt=""></a>
+                    <hr>
+                    <a href=""><h3>How to Own Your Audience <br> by Creating an Email List</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...</p>
+                    
+                </div>
+                <div class="row1">
+                    <a href=""> <img src="./images/blogimg2.JPG" alt=""></a>
+                    <hr>
+                    <a href=""> <h3>Top 10 Toolkits for Deep Learning in 2020</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...</p>
+                    
+                </div>
+                <div class="row1">
+                    <a href=""><img src="./images/blogimg3.JPG" alt=""></a>
+                    <hr>
+                    <a href=""><h3>Everything You Need to Know About Web Accessibility</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...</p>
+                    
+                </div>
+            </div>
+            <div class="inner">
+                <div class="row1">
+                    <a href=""><img src="./images/blogimg4.JPG" alt=""></a>
+                    <hr>
+                    <a href=""><h3>How to Inject Humor & Comedy Into Your Brand</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...</p>
+                    
+                </div>
+                <div class="row1">
+                    <a href=""><img src="./images/blogimg5.JPG" alt=""></a>
+                    <hr>
+                    <a href=""><h3>Women in Web Design: How To Achieve Success</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...</p>
+                    
+                </div>
+                <div class="row1">
+                    <a href=""><img src="./images/blogimg6.JPG" alt=""></a>
+                    <hr>
+                    <a href=""><h3>Evergreen versus topical content: An overview</h3></a>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="menublog">
+            <ul>
+                <li><a href="index.html"><p>HOME</p><i class="fas fa-home"></i></a></li>
+                <li><a href="about.html"><p>ABOUT</p><i class="fas fa-user"></i></a></li>
+                <li><a href="portfolio.html"><p>PORTFOLIO</p><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="contact.html"><p>CONTACT</p><i class="fas fa-envelope-open"></i></a></li>
+                <li><a href="blog.html" id="active"><p>BLOG</p><i class="fas fa-comments"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="pageslide">
+        <div>1</div> <div id="two">2</div> <div>3</div> <div>4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: rgb(29, 27, 27);
+            font-family: sans-serif;
+            color: #fff;
+        }
+        .header{
+            margin-top: 50px;
+            height: 140px;
+            font-size: 100px;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bolder;
+            color: rgb(46, 45, 45);
+
+        }
+        .header p{
+            font-size: 50px;
+            margin-top: -100px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            color: #fff;
+        }
+        .header p span{
+            color:goldenrod;
+        }
+        .contfolio{
+            display: flex;
+        }
+        
+        .settingfolio{
+            width: 100px;
+            height: 30px;
+            background: #fff;
+            align-items: center;
+            padding-bottom: 20px;
+            font-size: 20px;
+
+        }
+        .rotatefolio{
+            animation: rotation 2s infinite linear;
+            margin:15px 10px 10px 20px;
+            color: black;
+        }
+        @keyframes rotation{
+            from{ transform: rotate(0deg);
+            }
+            to{transform: rotate(359deg);
+            }
+        }
+        .gallery {
+             display: flex;
+             flex-direction: row;
+             flex-wrap: wrap;
+             justify-content: center;
+             align-items: center;
+             gap: 16px;
+             max-width: 1400px;
+             margin: 0 auto;
+             padding: 20px 10px;
+            
+        }
+        .gallery img {
+             width: 100%;
+             max-width: 350px;
+             height: 200px;
+             object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery img:hover{
+            transform: scale(1.03);
+        }
+
+        .menufolio{
+            
+            width: 100px;
+            height: 150px;
+            position: fixed;
+            right: 0;
+            padding-right: 30px;
+           
+        }
+        .menufolio ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: end;
+            list-style: none;
+            width: 100%;
+            
+        }
+        .menufolio p{
+            font-size: 14px;
+        }
+        .menufolio ul li{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 50px;
+            height: 50px;
+            margin-top: 12px;
+            
+        }
+        .menufolio ul li a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            overflow: hidden;
+            font-size: 15px;
+            background: rgb(46, 45, 45); 
+            border-radius: 50px;
+            padding: 0 25px; 
+            width: 100%;
+            height: 100%;
+            color: #fff; 
+            gap: 16px;
+            justify-content: end;
+            
+        }
+        .menufolio #activefol{
+            background: goldenrod;
+        }
+                
+        .menufolio ul li a:hover{
+            overflow: visible;
+            width: fit-content;
+            background: goldenrod;
+        }
+        /* .gallery:hover img{
+            transform:  scale(1.03);
+        } */
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+       <big>WORKS</big> 
+        <p>MY <span>PORTFOLIO</span>
+    </div>
+    <div class="contfolio">
+    <div class="settingfolio">
+        <div class="rotatefolio">
+            <span><i class="fa-solid fa-gear"></i></span>
+                                                                          
+        </div>
+    </div>
+    
+        <div class="gallery">
+            <img src="./images/folioimg1.JPG" alt="image-1">
+            <img src="./images/folioimg2.JPG" alt="image-2">
+            <img src="./images/folioimg3.JPG" alt="image-3">
+            <img src="./images/folioimg4.JPG" alt="image-4">
+            <img src="./images/folioimg5.JPG" alt="image-5">
+            <img src="./images/folioimg6.JPG" alt="image-6">
+            <img src="./images/folioimg7.JPG" alt="image-7">
+            <img src="./images/folioimg8.JPG" alt="image-8">
+            <img src="./images/folioimg9.JPG" alt="image-9">
+        </div>
+        <div class="menufolio">
+            <ul>
+                <li><a href="index.html" ><p>HOME</p><i class="fas fa-home"></i></a></li>
+                <li><a href="about.html"><p>ABOUT</p><i class="fas fa-user"></i></a></li>
+                <li><a href="portfolio.html" id="activefol"><p>PORTFOLIO</p><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="contact.html"><p>CONTACT</p><i class="fas fa-envelope-open"></i></a></li>
+                <li><a href="blog.html"><p>BLOG</p><i class="fas fa-comments"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+    
+</body>
+</html>

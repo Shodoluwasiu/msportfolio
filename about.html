@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: rgb(29, 27, 27);
+            font-family: sans-serif;
+            color: #fff;
+            
+        }
+        .top{
+            width: 600px;
+            height: 120px;
+            margin-top: 20px;
+            margin-left: 300px;
+            text-align: center;
+        }
+        .setting{
+            width: 70px;
+            height: 30px;
+            border: 2px solid white;
+            margin-right: 20px;
+            background: #fff;
+            align-items: center;
+            padding-bottom: 20px;
+            
+
+        }
+        .personalinfo{
+            width: 700px;
+            height: 450px;
+            margin-left: 40px;
+            color: #cecccc;
+            
+        }
+        .personalinfo button{
+            width: 180PX;
+            height: 50PX;
+            border-radius: 50px;
+            color: #fff;
+            background: goldenrod;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            border: none;
+        }
+        .personalinfo button:hover{
+            letter-spacing: 2px;
+        }
+        .info1{
+            
+            line-height: 3em;
+            margin-left: 20px;
+            font-stretch: expanded;
+            color: #cecccc;
+        }
+        #addres{
+            margin-left: 100px;
+        }
+        .experience{
+            width: 600px;
+            height: 410px; 
+            margin-left: -170px;
+        }
+        .menubar{
+            width: 100px;
+            height: 150px;
+            position: fixed;
+            right: 0;
+            padding-right: 30px;
+            margin-top: -40px;           
+        }
+
+        .menubar ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: end;
+            list-style: none;
+            width: 100%;
+            
+        }
+        .menubar p{
+            font-size: 14px;
+        }
+        .menubar ul li{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 50px;
+            height: 50px;
+            margin-top: 12px;
+            
+        }
+        .menubar ul li a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            overflow: hidden;
+            font-size: 15px;
+            background: rgb(46, 45, 45); 
+            border-radius: 50px;
+            padding: 0 25px; 
+            width: 100%;
+            height: 100%;
+            color: #fff; 
+            gap: 16px;
+            justify-content: end;
+            
+        }
+        .menubar #activeab{
+            background: goldenrod;
+        }
+                
+        .menubar ul li a:hover{
+            overflow: visible;
+            width: fit-content;
+            background: goldenrod;
+        }
+        .container{
+            display: flex;
+            margin-top: 50px;
+            
+        }
+        .me{
+           
+            margin-top: 10px;
+            display: flex;
+        }
+        .number{
+            display: flex;
+           
+        }
+        .number span{
+            border: 1px solid rgb(49, 49, 49);
+            margin-right: 30px;
+            width: 200px;
+            height: 150px;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            
+        }
+        .number span #epn{
+            color: goldenrod;
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 0px;
+        }
+        
+             
+        .fade{
+            text-align: center;
+            font-size: 60px;
+            margin-top: 10px;
+            font-weight: 800; 
+            color: rgb(61, 56, 56);
+        }
+        .top p{
+            margin-top: -100px;
+            font-size: 30px;
+            font-size: 40px;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+        }
+        .top span{
+            color: goldenrod;
+        }
+        .rotate i{
+            animation: rotation 2s infinite linear;
+            margin:15px 10px 10px 20px;
+            color: black;
+            
+            
+
+        }
+        @keyframes rotation{
+            from{ transform: rotate(0deg);
+            }
+            to{transform: rotate(359deg);
+            }
+        }
+        
+        #detail{
+            color: rgb(92, 90, 90);
+        }
+        hr{
+            color:white;
+            width: 500px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .skills{
+            margin-left: 530px;
+            margin-top: 40px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .circlespercent{
+            display: flex;
+            margin-left: 100px;
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #fff;
+            margin-left: 100px;
+            margin-top: 50px;
+            border-top: 10px solid rgb(46, 45, 45);
+            border-left:10px solid rgb(46, 45, 45);
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid rgb(46, 45, 45);
+            border-radius: 50%;
+            text-align: center;
+           
+        }
+        .circle p {
+            margin: 40px 20px;
+        }
+        .circlespercent .cskp #scircle{
+            border-top: 10px solid rgb(46, 45, 45);
+            border-left:10px solid goldenrod;
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid goldenrod;
+
+        }
+        .circlespercent .cskp  #tcircle, #ftcircle{
+            border-top: 10px solid goldenrod;
+            border-left:10px solid rgb(46, 45, 45);
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid goldenrod;
+
+        }
+        .circlespercent .cskp  #ffcircle{
+            border-top: 10px solid rgb(46, 45, 45);
+            border-left:10px solid goldenrod;
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid goldenrod;
+
+        }
+        .circlespercent .cskp  #sxcircle{
+            border-top: 10px solid rgb(46, 45, 45);
+            border-left:10px solid rgb(46, 45, 45);
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid goldenrod;
+
+        }
+        .circlespercent .cskp  #svcircle{
+            border-top: 10px solid goldenrod;
+            border-left:10px solid rgb(46, 45, 45);
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid goldenrod;
+
+        }
+        .circlespercent .cskp  #ecircle{
+            border-top: 10px solid rgb(46, 45, 45);
+            border-left:10px solid rgb(46, 45, 45);
+            border-right: 10px solid goldenrod;
+            border-bottom: 10px solid goldenrod;
+
+        }
+        #txt{
+            margin-left: 130px;
+        }
+        .exp{
+            margin-left: 460px;
+            font-size: 24px;
+            font-weight: bolder;
+            margin-top: 70px;
+        }
+        .experiencetab{
+            margin-left: 200px;
+            display: flex;
+            margin-top: 50px;
+            font-size: 14PX;
+            font-family: sans-serif;
+             /* margin-bottom: 100px;  */
+        }
+        .experi{
+            border: 2px solid rgb(51, 50, 50);
+            border-top: none;
+            border-right: none;
+            border-bottom: none;
+            padding: 50px;
+            height: 10px;
+            margin-bottom: 30px;
+
+        }
+        .experi p{
+            margin-top: -70px;
+            margin-left: -77px;
+        }
+        .experi p i{
+            
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background: goldenrod;
+           padding: 10px ;
+           text-align: center;
+        }
+        .experi p label{
+            border-radius: 10px;
+            background: rgb(46, 45, 45);
+            text-align: center;
+            margin-left: 20px;
+            padding: 1px 10px;
+            font-size: 14px;
+        }
+
+        .line{
+            border: 1px solid rgb(46, 45, 45);
+            width: 400px;
+            margin-left: 500px;
+            margin-top: -20px;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            
+        }
+        .line2{
+            border: 1px solid rgb(46, 45, 45);
+            width: 400px;
+            margin-left: 500px;
+            margin-top: 20px;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h1 class="fade">RESUME</h1>
+        <p>ABOUT <span>ME</span></p>
+    </div>
+    <div class="container">
+    <div class="setting">
+        <div class="rotate">
+            <span><i class="fa-solid fa-gear"></i></span>
+                                                                          
+        </div>
+    </div>
+    <div class="personalinfo">
+        <h3>PERSONAL INFOS</h3>
+        <div class="me">
+            <div class="info1">
+                <label for="" id="detail">First Name:</label><label for="">Wasiu</label><br>
+                <label for="" id="detail">Last Name:</label><label for="">Shodolu</label><br> 
+                <label for="" id="detail">Age:</label><label for="">30 Years</label><br>
+                <label for="" id="detail">Nationality:</label><label for="">Nigerian</label><br>
+                <label for="" id="detail">Freelance:</label><label for="">Available</label><br>
+            </div>
+            <div class="info1" id="addres">
+                <label for="" id="detail">Address:</label><label for="">Lagos</label><br>
+                <label for="" id="detail">Phone:</label><label for="">+234-8062476482</label><br>
+                <label for="" id="detail">Email:</label><label for="">olabodewasiu0@mail.com</label><br>
+                <label for="" id="detail">Skype:</label><label for="">Wasiu.S</label><br>
+                <label for="" id="detail">Language:</label><label for="">English, Yoruba</label><br>
+            </div>
+        </div>
+        <button>Download CV <i class="fa-solid fa-download"></i></button>
+    </div>
+    
+    <div class="experience">
+        <div class="number">
+            <span><p id="epn">12+</p>
+            <p>----YEARS OF <br>EXPERIENCE</p>
+            </span>
+            <span><p id="epn">97+</p> 
+                ----COMPLETED <br>PROJECTS
+            </span>
+        </div>
+        <div class="number">
+            <span><p id="epn">81+</p> 
+            <p>----HAPPY <br>CUSTOMERS</p>
+            </span>
+            <span><p id="epn">53+</p> 
+                ----AWARDS<br>WON
+            </span>
+        </div>
+    </div>
+    <div class="menubar">
+        <ul>
+            <li><a href="index.html" ><p>HOME</p><i class="fas fa-home"></i></a></li>
+            <li><a href="about.html" id="activeab"><p>ABOUT</p><i class="fas fa-user"></i></a></li>
+            <li><a href="portfolio.html"><p>PORTFOLIO</p><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="contact.html"><p>CONTACT</p><i class="fas fa-envelope-open"></i></a></li>
+            <li><a href="blog.html"><p>BLOG</p><i class="fas fa-comments"></i></a></li>
+        </ul>
+        
+    </div>
+</div>
+<div class="line"></div>
+<div class="skills">
+    MY SKILLS  
+</div>
+<div class="circlepercentage">
+    <div class="circlespercent">
+        <span class="cskp">
+            <div class="circle" id="fcircle"><p>25%</p></div>
+            <p id="txt">HTML</p>
+        </span>
+        
+        <span class="cskp">
+            <div class="circle" id="scircle"><p>89%</p></div>
+            <p id="txt">JAVASCRIPT</p>
+        </span>
+        
+        <span class="cskp">
+            <div class="circle" id="tcircle"><p>70%</p></div>
+            <p id="txt">CSS</p>
+        </span>
+        
+        <span class="cskp">
+            <div class="circle" id="ftcircle"><p>66%</p></div>
+            <p id="txt">PHP</p>
+        </span>
+        
+        </div>
+
+        <div class="circlespercent">
+            <span class="cskp">
+                <div class="circle" id="ffcircle"><p>95%</p></div>
+                <p id="txt">WORDPRESS</p>
+            </span>
+            
+            <span class="cskp">
+                <div class="circle" id="sxcircle"><p>50%</p></div>
+                <p id="txt">JQUERY</p>
+            </span>
+            
+            <span class="cskp">
+                <div class="circle" id="svcircle"><p>65%</p></div>
+                <p id="txt">ANGULAR</p>
+            </span>
+            
+            <span class="cskp">
+                <div class="circle" id="ecircle"><p>45%</p></div>
+                <p id="txt">REACT</p>
+            </span>
+            
+            </div>
+</div>
+<div class="line2"></div>
+<div class="exp">EXPERIENCE & EDUCATION</div>
+<div class="experiencetab">
+    
+    
+    <div class="experi"> 
+        <p><i class="fas fa-briefcase"></i> <label for="">2018 - PRESENT</label></p>
+       <h3>WEB DEVELOPER - ENVATO</h3> 
+        Lorem ipsum dolor sit amet, consectetur tempor incididunt <br> ut labore adipisicing elit,
+    </div>
+    <div class="experi"> 
+        <p><i class="fas fa-graduation-cap"></i> <label for="">2015</label></p>
+       <h3>ENGINEERING DEGREE OXFORD UNIVERSITY</h3> 
+        Lorem ipsum dolor sit amet, consectetur tempor incididunt <br> ut labore adipisicing elit,
+    </div>
+</div>
+<div class="experiencetab">
+    
+    <div class="experi"> 
+        <p><i class="fas fa-briefcase"></i> <label for="">2013 - 2018</label></p>
+       <h3>UI/UX DESIGNER - THEMEFOREST</h3> 
+        Lorem ipsum dolor sit amet, consectetur tempor incididunt <br> ut labore adipisicing elit,
+    </div>
+    <div class="experi"> 
+        <p><i class="fas fa-graduation-cap"></i> <label for="">2012</label></p>
+       <h3>MASTER DEGREE - KIEV UNIVERSITY</h3> 
+        Lorem ipsum dolor sit amet, consectetur tempor incididunt <br> ut labore adipisicing elit,
+    </div>
+</div>
+<div class="experiencetab">
+    
+    <div class="experi"> 
+        <p><i class="fas fa-briefcase"></i> <label for="">2005 - 2013</label></p>
+       <h3>CONSULTANT - VIDEOHIVE</h3> 
+        Lorem ipsum dolor sit amet, consectetur tempor incididunt <br> ut labore adipisicing elit,
+    </div>
+    <div class="experi"> 
+        <p><i class="fas fa-graduation-cap"></i> <label for="">2009</label></p>
+       <h3>BACHELOR DEGREE - TUNIS HIGH SCHOOL</h3> 
+        Lorem ipsum dolor sit amet, consectetur tempor incididunt <br> ut labore adipisicing elit,
+    </div>
+</div>
+
+
+</body>
+</html>
